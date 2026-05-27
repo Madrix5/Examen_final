@@ -1,0 +1,15 @@
+services:
+  srv_dev_XX:
+    image: ubuntu:22.04
+    container_name: srv_dev_XX
+    tty: true
+    volumes:
+      - datos_devXX:/var/empresa
+    networks:
+      - net_devXX
+
+#Mala indentación
+volumes: 
+  datos_devXX:
+networks:
+  net_devXX:

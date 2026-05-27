@@ -1,0 +1,19 @@
+version: '3.8' # No es necesario, salta warning pidiendo quitarlo porque es obsoleto
+
+services:
+  srv_dev_XX:
+    image: ubuntu:22 # Falta versión 22.04
+    container: srv_dev_XX # Falta container_name
+    # Falta tty: true, le dice al contenedor que no se apague
+    volumes:
+      - datos_devXX:/var/empresa
+    networks:
+      - net_devXX
+    ports:
+      - "8090:3000" # Es inútil ponerlo ya que no mostrará nada por ese puerto, a no ser que instales alguna cosa como pgadmin
+
+  #Mala indentación
+  volumes: 
+    datos_devXX:
+  networks:
+    net_dev_XX: # Debe coincidir con el nombre de arriba, aqui se añade un guión. bajo
